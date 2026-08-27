@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <body style="background-color: #c9ffcf;font-family: Helvetica, Noto Sans, sans-serif;">
-        <div style="border: solid; width: 850px; border-radius: 12px; padding: 10px;position:absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);justify-content: center;background-color: #89CFEF;">
+    <body style="background-color: #c9ffcf;font-family: Helvetica, Noto Sans, sans-serif; background-image: url('./yz.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; margin: 0;">
+        <div style="border: solid; width: 850px; border-radius: 12px; padding: 10px;position:absolute;top: 75%; left: 36%;transform: translate(-50%, -50%);justify-content: center;background-color: #89CFEF;">
         <img style="width: 144px; height: 144px;border-radius: 100%;object-fit: cover;" src="https://h0.havewallpaper.com/wallpaper-desktop/735/750/stunning-galaxy-collision-artwork-featuring-red-and-blue-nebulae-in-deep-space.jpg">
         <h1 style="margin: 4px"><b>GalacticaOS</b></h1>
         <p>
@@ -13,5 +13,26 @@
             <strong>Contact Information:</strong><br>
             Email: <a href="mailto:mandeepswami2010@gmail.com">my gmail</a></address>
         </div>
+        <div style="position: absolute;width: 100%; display:flex;backdrop-filter: blur(10px);background-color: rgba(0, 150, 200, 0.25); justify-content: space-between; gap: 32px;">
+            <p style="margin-left: 16px; font-weight:bold; background-color: rgba(255, 255, 255, 0.25); padding: 4px 12px ; border-radius: 16px;">
+                GalacticaOS 
+            </p>
+            <p style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 4px 12px; border-radius: 16px;">
+            ☀️ Always Learning ☁️ 
+
+            </p>
+            <p id="time" style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+                            Time
+            </p>
+
+        </div>
+        <script>
+            function updateTime() {
+                var Time = new Date().toLocaleString();
+                var timeText= document.querySelector("#time");
+                timeText.innerHTML = Time;
+            }
+            setInterval(updateTime, 1000);
+        </script>
     </body>
 </html>
