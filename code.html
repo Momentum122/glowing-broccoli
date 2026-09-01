@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
+    <head>
+  <script type="module" src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+    
     <body style="background-color: #c9ffcf;font-family: Helvetica, Noto Sans, sans-serif; background-image: url('./yz.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; margin: 0;">
-        <div style="border: solid; width: 850px; border-radius: 12px; padding: 10px;position:absolute;top: 75%; left: 36%;transform: translate(-50%, -50%);justify-content: center;background-color: #89CFEF;">
+        <!--window header-->
+        <div class="window" id="welcome" style="border: solid; width: 850px; border-radius: 12px; padding: 10px;position:absolute;top: 55%; left: 50%;transform: translate(-50%, -50%);justify-content: center;">
+            <div class="windowheader" id="welcomeheader" style="border-radius: 6px ; margin-bottom: 10px ; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+        <span class="headertext">GalacticaOS (Click and drag here)</span>
+        <!--close button-->
+        <div class="closebutton" id="welcomeclose"></div>
+    </div>
+    <!--window body-->
+    <div class="window-body" style="color: #ffffff;padding:10px">
+        <!--image-->    
         <img style="width: 144px; height: 144px;border-radius: 100%;object-fit: cover;" src="https://h0.havewallpaper.com/wallpaper-desktop/735/750/stunning-galaxy-collision-artwork-featuring-red-and-blue-nebulae-in-deep-space.jpg">
+        <!--window title and description-->
         <h1 style="margin: 4px"><b>GalacticaOS</b></h1>
         <p>
             Hello and welcome to <dfn>Galactica OS</dfn>!
-            <br><dfn>Galactica OS</dfn> is a feature limited <abbr title="Operating System">OS</abbr> to answer the question "who is ?"</p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here for a surprise!</a>
+            <br><dfn>Galactica OS</dfn> is a feature limited <abbr title="Operating System">OS</abbr></p>
+        <!--yt link-->
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: #00ffcc">Click here for a surprise!</a>
         <p>Thank you for visiting my OS page. I hope you enjoy exploring the features and functionalities that I've implemented. Feel free to reach out if you have any questions or feedback!</p>
+        <!--contact info-->
         <address>
             <strong>Contact Information:</strong><br>
-            Email: <a href="mailto:mandeepswami2010@gmail.com">my gmail</a></address>
+            Email: <a href="mailto:mandeepswami2010@gmail.com" style="color: #00ffcc">my gmail</a></address>
         </div>
-        <div style="position: absolute;width: 100%; display:flex;backdrop-filter: blur(10px);background-color: rgba(0, 150, 200, 0.25); justify-content: space-between; gap: 32px;">
-            <p style="margin-left: 16px; font-weight:bold; background-color: rgba(255, 255, 255, 0.25); padding: 4px 12px ; border-radius: 16px;">
+        </div>
+        <!--menu bar-->
+        <div style="position: absolute;top:0; left:0; width: 100%; display:flex;backdrop-filter: blur(10px);background-color: rgba(0, 150, 200, 0.25); justify-content: space-between; gap: 32px;">
+            <p style="margin-left: 16px;     font-weight:bold; background-color: rgba(255, 255, 255, 0.25); padding: 4px 12px ; border-radius: 16px;cursor: pointer;" id="welcomeopen">
                 GalacticaOS 
             </p>
             <p style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 4px 12px; border-radius: 16px;">
@@ -26,6 +45,12 @@
             </p>
 
         </div>
+          <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+            <div style="text-align: center; padding: 8px; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5)) ;width: fit-content;">
+                <img src="" style="width: 64px; height: 64px; border-radius: 12px;">
+          <p style="margin:0px ; color:#ffffff">NOTES</p>
+          </div>
+        <!--js-->
         <script>
             function updateTime() {
                 var Time = new Date().toLocaleString();
@@ -34,5 +59,6 @@
             }
             setInterval(updateTime, 1000);
         </script>
+        <script src="script.js"></script>
     </body>
 </html>
