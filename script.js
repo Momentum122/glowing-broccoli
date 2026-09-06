@@ -1,4 +1,3 @@
-DragElement(document.getElementById("welcome"));
 function DragElement(element) {
     var initialX=0;
     var initialY=0;
@@ -33,6 +32,9 @@ function DragElement(element) {
     }
 }
 var welcomeScreen = document.querySelector("#welcome")
+if (welcomeScreen) {
+    DragElement(welcomeScreen);
+}
 function closeWindow(element) {
   element.style.display = "none"
 }
@@ -60,7 +62,8 @@ function deselectIcon(element) {
     selectedIcon = undefined;
 }
 }
-function handleIconTap(element) {
+
+window.handleIconTap = function(element) {
     if (selectedIcon === element) {
         deselectIcon(element);
     } else {
@@ -70,6 +73,11 @@ function handleIconTap(element) {
         selectIcon(element);
     }
 }
+document.addEventListener("click", function(event) {
+    if(selectedIcon && !event.target.closest(".app-icon")) {
+        deselectIcon(selectedIcon);
+    }
+});
 var notesScreen = document.querySelector("#notes")
 var notesScreenClose = document.querySelector("#notesclose")
 
