@@ -48,3 +48,88 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
     openWindow(welcomeScreen);
 });
+
+var selectedIcon = undefined;
+function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element;
+}
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    if (selectedIcon === element) {
+    selectedIcon = undefined;
+}
+}
+function handleIconTap(element) {
+    if (selectedIcon === element) {
+        deselectIcon(element);
+    } else {
+        if (selectedIcon) {
+            deselectIcon(selectedIcon);
+        }
+        selectIcon(element);
+    }
+}
+var notesScreen = document.querySelector("#notes")
+var notesScreenClose = document.querySelector("#notesclose")
+
+if (notesScreen) {
+    DragElement(notesScreen);
+}
+window.openNoteswindow = function() {
+    openWindow(notesScreen);
+
+}
+if (notesScreenClose) {
+    notesScreenClose.addEventListener("click", function() {
+        closeWindow(notesScreen);
+    });
+}
+var clockScreen = document.querySelector("#clock")
+var clockScreenClose = document.querySelector("#clockclose")
+if (clockScreen) {
+    DragElement(clockScreen);
+}
+window.openClockwindow = function() {
+    openWindow(clockScreen);
+}
+if (clockScreenClose) {
+    clockScreenClose.addEventListener("click", function() {
+        closeWindow(clockScreen);
+    });
+}
+function updateAppClock() {
+    var now = new Date();
+    var timestring = now.toLocaleTimeString();
+    var dateString = now.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
+
+    var clockDisplay = document.querySelector("#appDigitalClock");
+    var dateDisplay = document.querySelector("#appDigitalDate");
+    if (clockDisplay) clockDisplay.innerText = timestring;
+    if (dateDisplay) dateDisplay.innerText = dateString;
+}
+setInterval(updateAppClock, 1000);
+updateAppClock();
+
+var alarmTimeout=null;
+window.setAppAlarm = function() {
+    var secondsInput = document.querySelector("#alarmSeconds");
+    var statusText = document.querySelector("#alarmStatus");
+    if(!secondsInput || !statusText) return;
+    var seconds = parseInt(secondsInput.value);
+    if (isNaN(seconds) || seconds <= 0) {
+        statusText.innerText = "Please enter a valid number of seconds.";
+        return;
+    }
+    if (alarmTimeout) {
+        clearTimeout(alarmTimeout);
+    }
+    statusText.innerText = "Alarm set for " + seconds + " seconds !";
+    secondsInput.value = "";
+    alarmTimeout = setTimeout(function() {
+        statusText.innerText = "Alarm!";
+        alert("Alarm!");
+    }, seconds * 1000);
+};
+
+ 

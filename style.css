@@ -44,3 +44,14 @@ justify-content: center;
     text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
     font-family: 'courier new', monospace;
 }
+.app-icon{
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border 0.3s ease;
+}
+.app-icon.selected {
+    background-color: rgba(0, 255, 204, 0.2);
+    border: 1px solid rgba(0, 255, 204, 0.5);
+    backdrop-filter: blur(5px);
+
+}
