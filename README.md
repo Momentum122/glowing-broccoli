@@ -25,3 +25,33 @@ File Structure
 5.  script.js :- Contains code for window dragging, Showing Current Time, working of notepad and Clock and Alarm Application, Opening windows , icon Selection and maybe some more that i forgot.
 6.  style.css :- Contains code for the good looking windows and glassmorphism styling .
 7.  yz.png :- Contains the main background image.
+
+Live Website :-
+https://momentum122.github.io/glowing-broccoli/code.html
+
+How to Use :-
+1. Move windows :- Click and hold the top bar of any window (where the application name and close button are)  to drag it around your desktop
+2. Select icons :- Click Once on any application (e.g. - Notes or Alarm ) icon to select and highlight them. Click anywhere on the desktop to deselect.
+3. Launch Apps :-  Click twice or double tap on any application to open it.
+4. Close Apps :- Click the cross on the top right of the opened window to close it.
+5. Write Notes :- Open the notes app and click on "write your notes here" and start writing your notes.
+6. Set an Timer :- Open the Alarm App then there should be box near bottom of the window enter the duration in seconds there , and click start timer to start a countdown .
+
+Future Roadmap :-
+1. Adding sounds to the OS and alarm app.
+2. Adding a calculator app.
+3. Adding a Google search bar.
+4. Adding the ability to change the size of the windows.
+
+BUILT WITH
+- HTML5 and CSS
+- Javascript 
+Contact
+Email:- mandeepswami2010@gmail.com
+Acknowlegments
+1. Built for the Stardance Hackclub .
+2. I dont own any images shown in the website.
+
+Queries , Issues and suggestions are allowed . If you have any please email them to me.
+If you want credit for images please contact me on my email.
+Email:- mandeepswami2010@gmail.com
